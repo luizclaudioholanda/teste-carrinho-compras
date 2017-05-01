@@ -1,21 +1,21 @@
 # teste-carrinho-compras
 Simples carrinho de compras (ReactJS + Spring boot)
 
-#Banco de dado MySQL
-CREATE TABLE `PRODUCT` (
-  `idProduct` bigint(20) NOT NULL AUTO_INCREMENT,
-  `name` varchar(60) NOT NULL,
-  `description` varchar(400) DEFAULT NULL,
-  `price` double NOT NULL,
-  PRIMARY KEY (`idProduct`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+#Banco de dado MySQL</br>
+CREATE TABLE `PRODUCT` (</br>
+  `idProduct` bigint(20) NOT NULL AUTO_INCREMENT,</br>
+  `name` varchar(60) NOT NULL,</br>
+  `description` varchar(400) DEFAULT NULL,</br>
+  `price` double NOT NULL,</br>
+  PRIMARY KEY (`idProduct`)</br>
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;</br>
 
-#End-Points
-POST
-/product/saveProduct
-/product/updateProduct
-/product/getAllByOrderByNameAsc
-
-GET
-/product/deleteProduct/{id}
-/product/getProduct/{id}
+#End-Points</br>
+POST</br>
+/product/saveProduct</br>
+/product/updateProduct</br>
+/product/getAllByOrderByNameAsc</br>
+</br></br>
+GET</br>
+/product/deleteProduct/{id}</br>
+/product/getProduct/{id}</br>
