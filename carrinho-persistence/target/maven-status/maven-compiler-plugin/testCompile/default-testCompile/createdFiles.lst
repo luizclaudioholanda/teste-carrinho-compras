@@ -1,0 +1,9 @@
+br/com/carrinho/service/impl/ProductServiceImplTest.class
+br/com/carrinho/service/AbstractGenericBaseTestService.class
+br/com/carrinho/CarrinhoIntegrationApplicationTest.class
+br/com/carrinho/service/AbstractGenericTestService.class
+br/com/carrinho/ObjectPopulator.class
+br/com/carrinho/AbstractRepositoryTest.class
+br/com/carrinho/service/InterfaceTestCRUD.class
+br/com/carrinho/InterfaceTestCRUD.class
+br/com/carrinho/DBConfig.class

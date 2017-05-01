@@ -1,0 +1,4 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+Carrinho persistence,br.com.carrinho.service,GenericCRUDService,34,0,0,0,9,0,6,0,6,0
+Carrinho persistence,br.com.carrinho.service.impl,ProductServiceImpl,9,9,0,0,2,5,2,2,2,2
+Carrinho persistence,br.com.carrinho.service.impl,GenericCRUDServiceImpl,0,35,0,0,0,9,0,7,0,7

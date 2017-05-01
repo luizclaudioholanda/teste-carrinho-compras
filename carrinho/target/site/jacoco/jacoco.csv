@@ -1,0 +1,6 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+carrinho,br.com.carrinho.config.spring,CarrinhoApplication,12,0,0,0,4,0,3,0,3,0
+carrinho,br.com.carrinho.config.spring,PersistenceDBConfiguration,58,0,0,0,16,0,6,0,6,0
+carrinho,br.com.carrinho.config.spring,ServletInitializer,12,0,0,0,2,0,2,0,2,0
+carrinho,br.com.carrinho.controller,AbstractController,28,6,0,0,6,3,5,1,5,1
+carrinho,br.com.carrinho.controller,ProductController,20,29,2,0,6,7,3,5,2,5

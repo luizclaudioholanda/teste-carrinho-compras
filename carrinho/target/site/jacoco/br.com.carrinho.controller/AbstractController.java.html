@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>AbstractController.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">carrinho</a> &gt; <a href="index.source.html" class="el_package">br.com.carrinho.controller</a> &gt; <span class="el_source">AbstractController.java</span></div><h1>AbstractController.java</h1><pre class="source lang-java linenums">package br.com.carrinho.controller;
+
+import java.io.Serializable;
+import java.util.Set;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import br.com.carrinho.service.InterfaceCRUDService;
+
+public abstract class AbstractController &lt;T, ID extends Serializable&gt;{
+
+	private InterfaceCRUDService&lt;T, ID&gt; service;
+	
+<span class="fc" id="L21">	public AbstractController(InterfaceCRUDService&lt;T, ID&gt; service){</span>
+<span class="fc" id="L22">		this.service = service;</span>
+<span class="fc" id="L23">	}</span>
+	
+	@RequestMapping(value = &quot;/save&quot;, method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody T save(@RequestBody T entity) {
+
+<span class="nc" id="L28">		return service.save(entity);</span>
+	} 
+	
+	@RequestMapping(value = &quot;/get/{entityId}&quot;, method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody T get(@PathVariable(&quot;entityId&quot;) ID entityId) {
+
+<span class="nc" id="L34">		return service.findOne(entityId);</span>
+	}
+	
+	@RequestMapping(value = &quot;/getAll&quot;, method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody Set&lt;T&gt; getAll() {
+
+<span class="nc" id="L40">		return service.findAll();</span>
+	}
+	
+	@RequestMapping(value = &quot;/delete&quot;, method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody ResponseEntity delete(@RequestBody T entity) {
+
+<span class="nc" id="L46">		service.delete(entity);</span>
+		
+<span class="nc" id="L48">		return new ResponseEntity(HttpStatus.OK);</span>
+	}
+	
+	@RequestMapping(value = &quot;/update&quot;, method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody T update(@RequestBody T entity) {
+
+<span class="nc" id="L54">		return service.save(entity);		</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

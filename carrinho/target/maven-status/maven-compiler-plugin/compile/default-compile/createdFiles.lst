@@ -1,0 +1,5 @@
+br/com/carrinho/controller/AbstractController.class
+br/com/carrinho/config/spring/CarrinhoApplication.class
+br/com/carrinho/config/spring/PersistenceDBConfiguration.class
+br/com/carrinho/config/spring/ServletInitializer.class
+br/com/carrinho/controller/ProductController.class
