@@ -1,6 +1,0 @@
-br/com/carrinho/service/ProductService.class
-br/com/carrinho/service/GenericCRUDService.class
-br/com/carrinho/service/impl/GenericCRUDServiceImpl.class
-br/com/carrinho/repository/ProductRepository.class
-br/com/carrinho/service/impl/ProductServiceImpl.class
-br/com/carrinho/service/InterfaceCRUDService.class
